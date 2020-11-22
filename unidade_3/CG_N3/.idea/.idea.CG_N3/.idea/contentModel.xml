@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\natha\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\natha\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_CG_N3.-1916328288.00" t="ExcludeRecursive" />
+    <e p="C:\Users\natha\Documents\Trabalhos\Furb_sexto_semestre\Computacao_grafica\cg_2020-2_not_equipe-02\unidade_3\CG_Biblioteca" t="IncludeRecursive">
+      <e p=".gitignore" t="Include" />
+      <e p="BBox.cs" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="CameraOrtho.cs" t="Include" />
+      <e p="CameraPerspective.cs" t="Include" />
+      <e p="CG_Biblioteca.code-workspace" t="Include" />
+      <e p="CG_Biblioteca.csproj" t="IncludeRecursive" />
+      <e p="Cor.cs" t="Include" />
+      <e p="docs" t="Include">
+        <e p="umlClasses.wsd" t="Include" />
+        <e p="umlClasses.wsd.png" t="Include" />
+      </e>
+      <e p="Matematica.cs" t="Include" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp3.1" t="Include">
+            <e p="CG_Biblioteca.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="plantuml" t="Include">
+        <e p="BBox.puml" t="Include" />
+        <e p="CameraOrtho.puml" t="Include" />
+        <e p="CameraPerspective.puml" t="Include" />
+        <e p="Cor.puml" t="Include" />
+        <e p="include.puml" t="Include" />
+        <e p="Matematica.puml" t="Include" />
+        <e p="Ponto4D.puml" t="Include" />
+        <e p="Transformacao4D.puml" t="Include" />
+      </e>
+      <e p="Ponto4D.cs" t="Include" />
+      <e p="README.md" t="Include" />
+      <e p="Transformacao4D.cs" t="Include" />
+    </e>
+    <e p="C:\Users\natha\Documents\Trabalhos\Furb_sexto_semestre\Computacao_grafica\cg_2020-2_not_equipe-02\unidade_3\CG_N3" t="IncludeRecursive">
+      <e p=".gitignore" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="CG_N3.code-workspace" t="Include" />
+      <e p="CG_N3.csproj" t="IncludeRecursive" />
+      <e p="CG_N3.sln" t="IncludeFlat" />
+      <e p="CG_Privado" t="Include" />
+      <e p="docs" t="Include">
+        <e p="umlClasses.wsd" t="Include" />
+        <e p="umlClasses.wsd.png" t="Include" />
+      </e>
+      <e p="EspecificacaoEsboco.pdf" t="Include" />
+      <e p="Mundo.cs" t="Include" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp3.1" t="Include">
+            <e p="CG_N3.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Objeto.cs" t="Include" />
+      <e p="ObjetoGeometria.cs" t="Include" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="plantuml" t="Include">
+        <e p="CG_Privado" t="Include">
+          <e p="Privado_BBox.puml" t="Include" />
+          <e p="Privado_Circulo.puml" t="Include" />
+          <e p="Privado_Matematica.puml" t="Include" />
+          <e p="Privado_SegReta.puml" t="Include" />
+        </e>
+        <e p="include.puml" t="Include" />
+        <e p="Mundo.puml" t="Include" />
+        <e p="Objeto.puml" t="Include" />
+        <e p="ObjetoGeometria.puml" t="Include" />
+        <e p="Poligono.puml" t="Include" />
+        <e p="Retangulo.puml" t="Include" />
+        <e p="Utilitario.puml" t="Include" />
+      </e>
+      <e p="Poligono.cs" t="Include" />
+      <e p="README.md" t="Include" />
+      <e p="Retangulo.cs" t="Include" />
+      <e p="Utilitario.cs" t="Include" />
+    </e>
+  </component>
+</project>
