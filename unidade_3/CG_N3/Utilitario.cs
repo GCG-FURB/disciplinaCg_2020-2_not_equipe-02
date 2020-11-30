@@ -1,16 +1,15 @@
-/**
+/*
   Autor: Dalton Solano dos Reis
-**/
+*/
 
 using System;
 
-namespace gcgcg
+namespace CG_N3
 {
     public abstract class Utilitario
     {
         public static void AjudaTeclado()
         {
-
             Console.WriteLine(" --- Ajuda / Teclas: ");
             Console.WriteLine(" [  H     ] mostra está ajuda. ");
             Console.WriteLine(" [Escape  ] sair. ");
@@ -32,16 +31,21 @@ namespace gcgcg
             Console.WriteLine(" [PageDown]         : amplia o polígono selecionado em relação a origem. ");
             Console.WriteLine(" [Home    ] N3-Exe11: reduz o polígono selecionado em relação ao centro da bBox. ");
             Console.WriteLine(" [End     ] N3-Exe11: amplia o polígono selecionado em relação ao centro da bBox. ");
-            Console.WriteLine(" [  1     ]         : rotação anti-horária do polígono selecionado em relação a origem. ");
+            Console.WriteLine(
+                " [  1     ]         : rotação anti-horária do polígono selecionado em relação a origem. ");
             Console.WriteLine(" [  2     ]         : rotação horária do polígono selecionado em relação a origem. ");
-            Console.WriteLine(" [  3     ] N3-Exe12: rotação anti-horária do polígono selecionado em relação ao centro da bBox. ");
-            Console.WriteLine(" [  4     ] N3-Exe12: rotação horária do polígono selecionado em relação ao centro da bBox. ");
+            Console.WriteLine(
+                " [  3     ] N3-Exe12: rotação anti-horária do polígono selecionado em relação ao centro da bBox. ");
+            Console.WriteLine(
+                " [  4     ] N3-Exe12: rotação horária do polígono selecionado em relação ao centro da bBox. ");
             Console.WriteLine(" [  R     ] N3-Exe08: atribui a cor vermelha ao polígono selecionado. ");
             Console.WriteLine(" [  G     ] N3-Exe08: atribui a cor verde ao polígono selecionado. ");
             Console.WriteLine(" [  B     ] N3-Exe08: atribui a cor azul ao polígono selecionado. ");
             Console.WriteLine(" [  S     ] N3-Exe07: alterna entre aberto e fechado o polígono selecionado. ");
-            Console.WriteLine(" [  D     ] N3-Exe05: remove o vértice do polígono selecionado que estiver mais perto do mouse. ");
-            Console.WriteLine(" [  V     ] N3-Exe05: move o vértice do polígono selecionado que estiver mais perto do mouse. ");
+            Console.WriteLine(
+                " [  D     ] N3-Exe05: remove o vértice do polígono selecionado que estiver mais perto do mouse. ");
+            Console.WriteLine(
+                " [  V     ] N3-Exe05: move o vértice do polígono selecionado que estiver mais perto do mouse. ");
             Console.WriteLine(" [  C     ] N3-Exe04: remove o polígono selecionado. ");
             Console.WriteLine(" [  X     ]         : rotação entorno do eixo X. ");
             Console.WriteLine(" [  Y     ]         : rotação entorno do eixo Y. ");
@@ -51,5 +55,9 @@ namespace gcgcg
             Console.WriteLine(" Senão tiver objeto selecionado adiciona novo objeto no mundo. ");
         }
 
+        public static char CharProximo(char charBase)
+        {
+            return ++charBase;
+        }
     }
 }

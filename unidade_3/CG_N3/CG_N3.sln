@@ -4,8 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG_N3", "CG_N3.csproj", "{DFC305EA-1A38-4E2F-8C5C-2162440E47AD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E7CF17D3-147D-4FEE-A85C-485E8B3A9AF1} = {E7CF17D3-147D-4FEE-A85C-485E8B3A9AF1}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CG_Biblioteca", "..\CG_Biblioteca\CG_Biblioteca.csproj", "{E7CF17D3-147D-4FEE-A85C-485E8B3A9AF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG_Biblioteca", "..\CG_Biblioteca\CG_Biblioteca.csproj", "{E7CF17D3-147D-4FEE-A85C-485E8B3A9AF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
