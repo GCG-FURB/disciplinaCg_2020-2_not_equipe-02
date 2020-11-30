@@ -68,18 +68,17 @@ namespace CG_Biblioteca
 
         public static bool IsPontoDentroPoligono(IEnumerable<Ponto4D> listaPontos, Ponto4D pontoSelecionado)
         {
+            var pontos = listaPontos.ToArray();
 
-            var pontoAnterior = listaPontos.FirstOrDefault();
             var quantidadeIntersec = 0;
-
-            foreach (var ponto in listaPontos)
+            for (var i = 0; i < pontos.Count(); i++)
             {
-                if (ponto == pontoAnterior)
-                    continue;
+                var ponto = pontos[i];
+                var proximoPonto = i + 1 < pontos.Count() ? pontos[i + 1] : pontos[0];
 
-                if (ponto.Y != pontoAnterior.Y)
+                if (ponto.Y != proximoPonto.Y)
                 {
-                    var pontoIntersec = BuscarPontoIntersec(ponto, pontoAnterior, pontoSelecionado);
+                    var pontoIntersec = BuscarPontoIntersec(ponto, proximoPonto, pontoSelecionado);
                 
                     if (pontoIntersec == null)
                     {
@@ -93,8 +92,8 @@ namespace CG_Biblioteca
                     else
                     {
                         if (pontoIntersec.X > pontoSelecionado.X &&
-                        pontoIntersec.Y >= Math.Min(ponto.Y, pontoAnterior.Y) &&
-                        pontoIntersec.Y <= Math.Max(ponto.Y, pontoAnterior.Y))
+                        pontoIntersec.Y > Math.Min(ponto.Y, proximoPonto.Y) &&
+                        pontoIntersec.Y <= Math.Max(ponto.Y, proximoPonto.Y))
                         {
                             quantidadeIntersec++;
                         }
@@ -102,14 +101,13 @@ namespace CG_Biblioteca
                 }
                 else
                 {
-                    if (pontoSelecionado.Y == pontoAnterior.Y &&
-                        pontoSelecionado.X >= Math.Min(ponto.X, pontoAnterior.X) &&
-                        pontoSelecionado.X <= Math.Max(ponto.X, pontoAnterior.X))
+                    if (pontoSelecionado.Y == proximoPonto.Y &&
+                        pontoSelecionado.X >= Math.Min(ponto.X, proximoPonto.X) &&
+                        pontoSelecionado.X <= Math.Max(ponto.X, proximoPonto.X))
                     {
                         return true;
                     }
                 }
-                pontoAnterior = ponto;
             }
 
             return quantidadeIntersec % 2 == 1;

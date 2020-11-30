@@ -53,6 +53,7 @@ namespace gcgcg
             Console.WriteLine(" --- Ajuda / Teclas: ");
             Console.WriteLine(" [  H     ] mostra teclas usadas. ");
 
+            /*
             objetoId = Utilitario.CharProximo(objetoId);
             objetoNovo = new Poligono(objetoId, null);
             objetosLista.Add(objetoNovo);
@@ -62,6 +63,7 @@ namespace gcgcg
             objetoNovo.PontosAdicionar(new Ponto4D(50, 350));
             objetoSelecionado = objetoNovo;
             objetoNovo = null;
+            */
 
 #if CG_Privado
       objetoId = Utilitario.charProximo(objetoId);
