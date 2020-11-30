@@ -33,7 +33,7 @@ namespace gcgcg
         private Ponto4D pontoSelecionado = null;
 
         private char objetoId = '@';
-        private bool bBoxDesenhar = true;
+        private bool bBoxDesenhar = false;
         int mouseX, mouseY; //TODO: achar método MouseDown para não ter variável Global
         private Poligono objetoNovo = null;
 #if CG_Privado
@@ -213,6 +213,12 @@ namespace gcgcg
                     RemoverPontoSelecionadoObjetoGeometria(objetoSelecionado);
                 else if (e.Key == Key.BackSpace)
                     RemoverPontoSelecionadoObjetoGeometria(objetoSelecionado);
+                else if (e.Key == Key.Y)
+                    objetoSelecionado.TrocaEixoRotacao('y');
+                else if (e.Key == Key.X)
+                    objetoSelecionado.TrocaEixoRotacao('x');
+                else if (e.Key == Key.Z)
+                    objetoSelecionado.TrocaEixoRotacao('z');
                 else if (e.Key == Key.C)
                 {
                     objetosLista.Remove(objetoSelecionado);
