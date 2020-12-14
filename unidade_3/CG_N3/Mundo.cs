@@ -1,5 +1,4 @@
 ﻿#define CG_Gizmo
-// #define CG_Privado
 
 using System;
 using OpenTK;
