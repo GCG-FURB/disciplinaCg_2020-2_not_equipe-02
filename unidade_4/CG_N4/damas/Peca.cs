@@ -9,6 +9,7 @@ namespace CG_N4.damas
     internal class Peca : ObjetoGeometria
     {
         public double Altura { get; private set; }
+        private double Raio { get; set; }
 
         public int PosX { get; set; }
         public int PosY { get; set; }
@@ -16,18 +17,21 @@ namespace CG_N4.damas
         public bool IsPecaJogadorUm { get; set; }
         public bool IsRainha { get; set; } = false;
 
+        private Ponto4D CentroBase { get; set; }
         public Ponto4D PosicaoAtual { get; set; }
 
 
         protected List<int> listaTopologia = new List<int>();
 
-        public Peca(int posX, int posY, double radius, double height, Ponto4D centroBase, char rotulo, Objeto paiRef, int segments = 40) : base(rotulo, paiRef)
+        public Peca(int posX, int posY, double raio, double height, Ponto4D centroBase, char rotulo, Objeto paiRef, int segments = 40) : base(rotulo, paiRef)
         {
             PosX = posX;
             PosY = posY;
 
             Altura = height;
+            Raio = raio;
 
+            CentroBase = centroBase;
             PosicaoAtual = centroBase;
 
             for (double y = 0; y < 2; y++)
@@ -36,9 +40,9 @@ namespace CG_N4.damas
                 {
                     double theta = (x / (segments - 1)) * 2 * Math.PI;
                     base.PontosAdicionar(new Ponto4D(
-                        (float)(centroBase.X + (radius * Math.Cos(theta))),
+                        (float)(centroBase.X + (raio * Math.Cos(theta))),
                         (float)(centroBase.Y + (height * y)),
-                        (float)(centroBase.Z + (radius * Math.Sin(theta)))));
+                        (float)(centroBase.Z + (raio * Math.Sin(theta)))));
                 }
             }
             // ponto do centro da base
@@ -65,6 +69,22 @@ namespace CG_N4.damas
                 listaTopologia.Add(segments);
             }
 
+        }
+
+        public void TornarRainha()
+        {
+            if (IsRainha)
+            {
+                return;
+            }
+
+            IsRainha = true;
+
+            var pecaRainha = new Peca(-1, -1, Raio, Altura, new Ponto4D(CentroBase.X, CentroBase.Y + (Altura * 1.1), CentroBase.Z), Utilitario.CharProximo(), this)
+            {
+                ObjetoCor = this.ObjetoCor
+            };
+            FilhoAdicionar(pecaRainha);
         }
 
         protected override void DesenharObjeto()

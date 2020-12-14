@@ -109,7 +109,7 @@ namespace CG_N4.damas
             var peca = _pecas.FirstOrDefault(p => p.PosX == diagX && p.PosY == diagY);
             if (peca == null)
             {
-                MovimentosPossiveis.Add(_tabuleiro.Casas[diagX, diagY], peca);
+                MovimentosPossiveis.Add(_tabuleiro.Casas[diagX, diagY], pulado);
                 return;
             }
             if (peca.IsPecaJogadorUm != pecaSelecionada.IsPecaJogadorUm && pulado == null)
@@ -162,7 +162,7 @@ namespace CG_N4.damas
             }
             if (peca.IsPecaJogadorUm != pecaSelecionada.IsPecaJogadorUm && pulado == null)
             {
-                VerificarDiagonaTrasDireita(diagX, diagY, pulado);
+                VerificarDiagonaTrasDireita(diagX, diagY, peca);
             }
         }
 
@@ -186,7 +186,7 @@ namespace CG_N4.damas
             }
             if (peca.IsPecaJogadorUm != pecaSelecionada.IsPecaJogadorUm && pulado == null)
             {
-                VerificarDiagonalTrasEsquerda(diagX, diagY, pulado);
+                VerificarDiagonalTrasEsquerda(diagX, diagY, peca);
             }
         }
 
@@ -249,7 +249,7 @@ namespace CG_N4.damas
 
             if (SeletorY == Limite || SeletorY == 0)
             {
-                pecaSelecionada.IsRainha = true;
+                pecaSelecionada.TornarRainha();
             }
         }
 
